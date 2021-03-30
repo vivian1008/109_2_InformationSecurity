@@ -1,7 +1,12 @@
 import random as rand
 class RSA:
     def __init__(self):
-        print('Hello')
+        print(self.genPrimeList())
+        self.p,self.q = map(int,input().split())
+        self.N = self.p * self.q
+        self.N1 = (self.p-1) * (self.q-1)
+        print(self.genElist())
+        self.e = int(input())
     def encrypt(self,msg):
         print('encrypt')
     def decrypt(self,msg):
